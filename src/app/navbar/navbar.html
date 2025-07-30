@@ -1,0 +1,12 @@
+<nav class="navbar">
+  <ul class="navbar-list">
+    <li
+      *ngFor="let item of navitem"
+      class="nav-item"
+      [class.active]="item === activeitem"
+      (click)="navigateTo(item)"
+    >
+      {{ item }}
+    </li>
+  </ul>
+</nav>

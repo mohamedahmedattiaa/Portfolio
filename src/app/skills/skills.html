@@ -1,0 +1,38 @@
+<link
+  href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+<!-- TECHNICAL SKILLS -->
+<div class="skill-section">
+  <h2 class="section-title">Technical Skills</h2>
+  <div class="skills-container">
+    <div class="skill-card tech-card" *ngFor="let skill of technicalSkills">
+      <div class="skill-header">
+        <i class="material-icons skill-icon tech-icon">{{ skill.icon }}</i>
+        <span class="skill-name">{{ skill.name }}</span>
+        <span class="skill-percent">{{ skill.level }}%</span>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-fill tech-fill" [style.width.%]="skill.level"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SOFT SKILLS -->
+<div class="skill-section">
+  <h2 class="section-title" style="color: #22d3ee;">Soft Skills</h2>
+  <div class="skills-container">
+    <div class="skill-card soft-card" *ngFor="let skill of softSkills">
+      <div class="skill-header">
+        <i class="material-icons skill-icon soft-icon">{{ skill.icon }}</i>
+        <span class="skill-name">{{ skill.name }}</span>
+    </div>
+  </div>
+</div>
+

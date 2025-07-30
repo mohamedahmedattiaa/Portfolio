@@ -1,0 +1,129 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 86vh;
+  padding: 0 2rem;
+  color: #e0e7ff;
+  flex-wrap: wrap;
+  gap: 2rem;
+  text-align: left;
+}
+
+.profile-image {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(139, 92, 246, 0.5);
+  border: 4px solid #7c3aed;
+  transition: transform 0.4s ease;
+  background: radial-gradient(circle at center, #7c3aed33, transparent 70%);
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #c084fc;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 12px rgba(192, 132, 252, 0.3);
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #a78bfa;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 8px rgba(167, 139, 250, 0.3);
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #ddd6fe;
+  text-shadow: 0 0 6px rgba(221, 214, 254, 0.15);
+}
+.name {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #c084fc; /* Light Purple */
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 12px rgba(192, 132, 252, 0.3);
+}
+
+.title {
+  font-size: 1.5rem;
+  color: #38bdf8; /* Sky Blue for contrast */
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #a78bfa; /* Softer Indigo */
+  text-shadow: 0 0 6px rgba(167, 139, 250, 0.2);
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap; 
+}
+
+
+.social-icons {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.social-icons a i {
+  font-size: 1.8rem;
+  color: #a78bfa; /* Soft purple */
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover i {
+  color: #38bdf8; /* Sky Blue */
+  transform: scale(1.2);
+}
+
+.cv-button {
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.5rem 1.2rem;
+  color: #38bdf8;
+  border: 2px solid #38bdf8;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+}
+
+.cv-button:hover {
+  background-color: #38bdf8;
+  color: #0f172a;
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.5);
+}

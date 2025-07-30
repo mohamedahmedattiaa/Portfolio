@@ -1,0 +1,88 @@
+.skills-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 2rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #c084fc;
+  text-align: center;
+  border-bottom: 2px solid #333;
+  padding-bottom: 0.5rem;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.skill-card {
+  width: 260px;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 15px rgba(160, 88, 255, 0.05);
+  transition: transform 0.3s;
+  color: white;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.skill-bar {
+  background: #333;
+  border-radius: 1rem;
+  overflow: hidden;
+  height: 8px;
+}
+
+.skill-fill {
+  height: 8px;
+  transition: width 1s ease-in-out;
+}
+
+/* TECHNICAL STYLING */
+.tech-card {
+  background-color: #2a1f3c;
+}
+
+.tech-fill {
+  background-color: #a855f7;
+}
+
+.tech-icon {
+  color: #a855f7;
+}
+
+/* SOFT SKILLS STYLING */
+.soft-card {
+  background-color: #163741;
+}
+
+.soft-fill {
+  background-color: #22d3ee;
+}
+
+.soft-icon {
+  color: #22d3ee;
+}
+.tech-card:hover {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.2);
+}
+
+.soft-card:hover {
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.2);
+}

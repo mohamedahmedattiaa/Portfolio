@@ -1,0 +1,27 @@
+<div class="contact-container">
+  <h2 class="contact-title">Let's Connect</h2>
+
+  <form (ngSubmit)="sendEmail()" #contactForm="ngForm" class="contact-form">
+    <input
+      type="text"
+      name="name"
+      placeholder="Your Name"
+      [(ngModel)]="formData.name"
+      required
+    />
+    <input
+      type="email"
+      name="email"
+      placeholder="Your Email"
+      [(ngModel)]="formData.email"
+      required
+    />
+    <textarea
+      name="message"
+      placeholder="Your Message"
+      [(ngModel)]="formData.message"
+      required
+    ></textarea>
+    <button type="submit" [disabled]="!contactForm.form.valid">Send</button>
+  </form>
+</div>

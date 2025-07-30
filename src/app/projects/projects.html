@@ -1,0 +1,17 @@
+<div class="project-line-card" *ngFor="let project of projects">
+  <div class="card-content">
+    <h2>{{ project.title }}</h2>
+    <p class="description">{{ project.description }}</p>
+    <div class="tech-used">
+      <strong>Tech Stack:</strong>
+      <ul>
+        <li *ngFor="let tech of project.technologies">{{ tech }}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card-actions">
+    <a [href]="project.github" target="_blank" rel="noopener noreferrer" class="github-button">
+      <i class="fab fa-github"></i> GitHub Repo
+    </a>
+  </div>
+</div>
