@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "prebuild": "node tools/set-env.js",
-  "build": "ng build --configuration production",
-  "start": "ng serve",
-  "test": "ng test",
-  "lint": "ng lint"
+    "build": "npm run prebuild && ng build --configuration production",
+    "start": "ng serve",
+    "test": "ng test",
+    "lint": "ng lint"
   },
   "prettier": {
     "overrides": [
