@@ -43,8 +43,7 @@ Thumbs.db
 
 
 # envirnoment 
-src/environments/environment.prod.ts
-src/environments
+
 
 # Angular specific
 .netlify.toml
