@@ -27,8 +27,13 @@
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/assets", 
-              "src/favicon.ico"
+              "src/assets",
+              "src/favicon.ico",
+              {
+                "glob": "_redirects",
+                "input": "src",
+                "output": "/"
+              }
             ],
             "styles": [
               "src/styles.css",
@@ -37,7 +42,7 @@
           },
           "configurations": {
             "production": {
-              "outputPath": "dist/Portfolio", 
+              "outputPath": "dist/Portfolio/browser",
               "budgets": [
                 {
                   "type": "initial",

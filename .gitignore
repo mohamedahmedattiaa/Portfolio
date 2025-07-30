@@ -49,3 +49,6 @@ src/environments
 
 # Angular specific
 .netlify.toml
+
+# Local Netlify folder
+.netlify

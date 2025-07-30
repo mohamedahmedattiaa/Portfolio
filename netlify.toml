@@ -1,5 +1,6 @@
 [build]
-  command = "mv angular.json angular.tmp.json && ng build --configuration production && mv angular.tmp.json angular.json"
+  command = "powershell -Command \"Rename-Item angular.json angular.tmp\" && ng build --configuration production && powershell -Command \"Rename-Item angular.tmp angular.json\""
+  
   publish = "dist/Portfolio"
 
 
