@@ -1,0 +1,14 @@
+[build]
+  publish = "dist/Portfolio"
+  command = "ng build --configuration production"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[plugins]]
+package = "@netlify/angular-runtime"
+
+  [plugins.inputs]
+  enabled = false
