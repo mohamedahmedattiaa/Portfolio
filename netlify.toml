@@ -1,6 +1,7 @@
 [build]
+  command = "mv angular.json angular.tmp.json && ng build --configuration production && mv angular.tmp.json angular.json"
   publish = "dist/Portfolio"
-  command = "ng build --configuration production"
+
 
 [[redirects]]
   from = "/*"
