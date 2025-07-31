@@ -86,3 +86,70 @@
 .soft-card:hover {
   box-shadow: 0 0 20px rgba(34, 211, 238, 0.2);
 }
+
+/* Tablet View (max-width: 992px) */
+@media (max-width: 992px) {
+  .skills-wrapper {
+    padding: 1.5rem;
+    gap: 3rem;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .skill-card {
+    width: 220px;
+  }
+
+  .skill-header {
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile View (max-width: 768px) */
+@media (max-width: 768px) {
+  .skills-wrapper {
+    padding: 1.2rem;
+    gap: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-card {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .skill-header {
+    font-size: 0.8rem;
+  }
+}
+
+/* Extra Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .skill-card {
+    width: 100%;
+    padding: 0.8rem;
+  }
+
+  .skill-header {
+    font-size: 0.75rem;
+  }
+
+  .skill-bar,
+  .skill-fill {
+    height: 6px;
+  }
+}

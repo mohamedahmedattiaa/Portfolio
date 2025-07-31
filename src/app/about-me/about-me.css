@@ -21,3 +21,50 @@
   margin-bottom: 1rem;
   text-align: justify;
 }
+
+/* Tablet View (max-width: 992px) */
+@media (max-width: 992px) {
+  .about-container {
+    padding: 2.5rem 1.2rem;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile View (max-width: 768px) */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 2rem 1rem;
+  }
+
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    text-align: left; /* Improves legibility on narrow screens */
+  }
+}
+
+/* Extra Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .about-container {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .about-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+  }
+}
+

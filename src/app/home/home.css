@@ -127,3 +127,108 @@
   color: #0f172a;
   box-shadow: 0 0 18px rgba(56, 189, 248, 0.5);
 }
+
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    height: auto;
+  }
+
+  .profile-image {
+    width: 220px;
+    height: 220px;
+  }
+
+  .hero-text {
+    align-items: center;
+  }
+
+  .name {
+    font-size: 2.8rem;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .tagline {
+    font-size: 1.1rem;
+  }
+
+  .hero-actions {
+    align-items: center;
+  }
+
+  .button-group {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 1.5rem 1rem;
+  }
+
+  .profile-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .name {
+    font-size: 2.3rem;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .cv-button {
+    font-size: 0.95rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .social-icons a i {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .tagline {
+    font-size: 0.95rem;
+  }
+
+  .cv-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}

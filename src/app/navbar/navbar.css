@@ -59,3 +59,61 @@
   margin-left: auto;
   font-weight: 600;
 }
+
+@media (max-width: 992px) {
+  .navbar-list {
+    gap: 2.5rem;
+  }
+
+  .nav-item {
+    font-size: 1rem;
+  }
+
+  .logout-btn {
+    padding: 6px 12px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.75rem 0;
+  }
+
+  .navbar-list {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-item {
+    font-size: 0.95rem;
+    padding-bottom: 0.3rem;
+  }
+
+  .logout-btn {
+    margin-left: 0;
+    margin-top: 0.8rem;
+    width: 90%;
+    max-width: 200px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-item {
+    font-size: 0.9rem;
+  }
+
+  .navbar-list {
+    gap: 1rem;
+  }
+
+  .logout-btn {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+}
