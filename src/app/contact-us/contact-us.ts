@@ -15,9 +15,13 @@ export class ContactUs {
   };
 
   sendEmail() {
-    const serviceID = environment.emailServiceID;
-    const templateID = environment.emailTemplateID;
-    const publicKey = environment.emailPublicKey;
+    const { emailServiceID, emailTemplateID, emailPublicKey } = environment;
+
+    if (!emailServiceID || !emailTemplateID || !emailPublicKey) {
+      console.error('EmailJS is not configured properly.');
+      alert('Message failed to send: Configuration missing.');
+      return;
+    }
 
     const templateParams = {
       name: this.formData.name,
@@ -26,7 +30,7 @@ export class ContactUs {
     };
 
     emailjs
-      .send(serviceID, templateID, templateParams, publicKey)
+      .send(emailServiceID, emailTemplateID, templateParams, emailPublicKey)
       .then(() => {
         alert('Message sent successfully!');
         this.formData = { name: '', email: '', message: '' };
