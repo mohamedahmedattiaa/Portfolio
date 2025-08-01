@@ -2,8 +2,7 @@
   "name": "portfolio",
   "version": "0.0.0",
   "scripts": {
-    "prebuild": "node tools/set-env.js",
-    "build": "npm run prebuild && ng build --configuration production",
+    "build": "ng build --configuration production",
     "start": "ng serve",
     "test": "ng test",
     "lint": "ng lint"
