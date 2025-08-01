@@ -39,5 +39,6 @@ export class ContactUs {
         console.error('EmailJS Error:', err);
         alert(`Message failed to send: ${err.text || 'Unknown error'}`);
       });
+      console.log('EmailJS Public Key:', environment.emailPublicKey);
   }
 }
