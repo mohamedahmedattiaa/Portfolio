@@ -34,7 +34,7 @@
           },
           "configurations": {
             "production": {
-              "outputPath": "dist/Portfolio",
+              "outputPath": "dist/Portfolio/browser",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
