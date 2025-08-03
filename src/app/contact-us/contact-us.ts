@@ -36,9 +36,9 @@ export class ContactUs {
         this.formData = { name: '', email: '', message: '' };
       })
       .catch((err) => {
-        console.error('EmailJS Error:', err);
-        alert(`Message failed to send: ${err.text || 'Unknown error'}`);
-      });
+  console.error('EmailJS Error:', err);
+  alert(`Something went wrong. Redirecting you to send an email: ${err.text || 'Unknown error'}`);
+       window.location.href = 'mailto:mohamedahmedattia27@example.com';
+     });
   }
 }
-console.log('EmailJS Public Key:', environment.emailPublicKey);
