@@ -15,30 +15,43 @@ export class ContactUs {
   };
 
   sendEmail() {
-    const { emailServiceID, emailTemplateID, emailPublicKey } = environment;
+  const { emailServiceID, emailTemplateID, emailPublicKey } = environment;
 
-    if (!emailServiceID || !emailTemplateID || !emailPublicKey) {
-      console.error('EmailJS is not configured properly.');
-      alert('Message failed to send: Configuration missing.');
-      return;
-    }
+  if (!emailServiceID || !emailTemplateID || !emailPublicKey) {
+    console.error('EmailJS is not configured properly.');
+    alert('Message failed to send: Configuration missing.');
+    return;
+  }
 
-    const templateParams = {
-      name: this.formData.name,
-      email: this.formData.email,
-      message: this.formData.message,
-    };
+  const templateParams = {
+    name: this.formData.name,
+    email: this.formData.email,
+    message: this.formData.message,
+  };
 
-    emailjs
-      .send(emailServiceID, emailTemplateID, templateParams, emailPublicKey)
-      .then(() => {
-        alert('Message sent successfully!');
-        this.formData = { name: '', email: '', message: '' };
-      })
-      .catch((err) => {
-  console.error('EmailJS Error:', err);
-  alert(`Something went wrong. Redirecting you to send an email: ${err.text || 'Unknown error'}`);
-       window.location.href = 'mailto:mohamedahmedattia27@example.com';
-     });
+  emailjs
+    .send(emailServiceID, emailTemplateID, templateParams, emailPublicKey)
+    .then((response) => {
+      alert('Message sent successfully!');
+      console.log('EmailJS Success Response:', response);
+      this.formData = { name: '', email: '', message: '' };
+    })
+    .catch((err) => {
+      console.error('EmailJS Error:', err);
+
+      const subject = encodeURIComponent(`Error Sending Message: ${this.formData.name}`);
+      const body = encodeURIComponent(
+        `There was an issue sending the email through the contact form. Here are the details:\n\n
+        Name: ${this.formData.name}\n
+        Email: ${this.formData.email}\n
+        Message: ${this.formData.message}\n\n
+        Error Message: ${err.text || 'Unknown error'}`
+      );
+
+      const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=mohamedahmedattia27@gmail.com&su=${subject}&body=${body}`;
+
+      alert('Message failed to send. Redirecting to Gmail to send a message manually.');
+      window.location.href = gmailLink;
+    });
   }
 }
